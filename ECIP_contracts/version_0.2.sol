@@ -19,7 +19,7 @@ contract ecip is owned {
     string public author;      //  Author of the ecip
     string public description; //  short description of the item
     string public extUrl;      //  a link to the full text
-    uint publit created ;
+    uint public created ;
     
 
 //simple comment section
@@ -58,10 +58,10 @@ function comment(string _comment) {
 
 //allow for sequential comment pulling call address the comment for each comment in cCount
 function getSender(uint _index)  constant returns (address){
-  returns cmnts[_index].cmntAddr;
+  return cmnts[_index].cmntAddr;
 }
 function getCmnt(uint _index)  constant returns (string){
-  returns cmnts[_index].cmntText;
+  return cmnts[_index].cmntText;
 }
 
 // allow owner to remove comments in the event of a grossly need removal this should be avoided at all costs
